@@ -1,0 +1,8 @@
+[configuration]
+entry_symbol = "active_window_info_init"
+compatibility_minimum = "4.4"
+reloadable = true
+
+[libraries]
+windows.debug.x86_64 = "res://addons/active_window_info/bin/active_window_info.dll"
+windows.release.x86_64 = "res://addons/active_window_info/bin/active_window_info.dll"
