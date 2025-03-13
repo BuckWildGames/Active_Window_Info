@@ -29,15 +29,8 @@ func enter(previous : String):
 
 func button_pressed(button: String) -> void:
 	match button:
-		"overlay":
-			if overlay.is_overlay_enabled():
-				overlay.disable_overlay()
-				label.set_visible(false)
-				print("Disabled Overlay")
-			else:
-				overlay.enable_overlay()
-				label.set_visible(true)
-				print("Enabled Overlay")
+		"get_window":
+			pass
 
 
 func _on_quit(quit: String) -> void:

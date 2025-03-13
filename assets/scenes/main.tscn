@@ -59,7 +59,6 @@ canvas_layers = [NodePath("Menu"), NodePath("Notification")]
 [node name="Menu" type="CanvasLayer" parent="UiManager"]
 
 [node name="Title" type="Panel" parent="UiManager/Menu"]
-visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -101,7 +100,7 @@ offset_bottom = -72.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/font_size = 32
-text = "Tap to Start"
+text = "Click to Start"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -181,10 +180,11 @@ grow_horizontal = 2
 grow_vertical = 2
 alignment = 1
 
-[node name="OverlayButton" type="Button" parent="UiManager/Menu/Menu/Buttons"]
+[node name="Button" type="Button" parent="UiManager/Menu/Menu/Buttons"]
+visible = false
 layout_mode = 2
 theme_override_font_sizes/font_size = 48
-text = "Overlay"
+text = "button"
 
 [node name="Label" type="Label" parent="UiManager/Menu/Menu/Buttons"]
 visible = false
@@ -202,4 +202,4 @@ visible = false
 metadata/_custom_type_script = "uid://di55ye4brjso0"
 
 [connection signal="pressed" from="UiManager/Menu/Title/StartButton" to="UiManager/Menu/Title" method="transition" binds= ["menu"]]
-[connection signal="pressed" from="UiManager/Menu/Menu/Buttons/OverlayButton" to="UiManager/Menu/Menu" method="button_pressed" binds= ["overlay"]]
+[connection signal="pressed" from="UiManager/Menu/Menu/Buttons/Button" to="UiManager/Menu/Menu" method="button_pressed" binds= ["overlay"]]
